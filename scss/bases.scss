@@ -1,0 +1,56 @@
+.primary-mobile-btn,
+.primary-desktop-btn {
+    align-items: center;
+    background: $blue100;
+    border: none;
+    color: $white100;
+    display: flex;
+    justify-content: center;
+}
+
+.primary-mobile-btn:hover,
+.primary-desktop-btn:hover {
+    background-color: $blue80;
+    cursor: pointer;
+}
+
+.primary-mobile-btn {
+    height: 40px;
+    padding: 12px 16px;
+    width: 68px;
+}
+
+.primary-desktop-btn {
+    height: 51px;
+    padding: 16px;
+    width: 72px;
+}
+
+.secondary-mobile-btn,
+.secondary-desktop-btn {
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid $blue100;
+    color: $blue100;
+    display: flex;
+    font-weight: 400;
+    justify-content: center;
+}
+
+.secondary-mobile-btn:hover,
+.secondary-desktop-btn:hover {
+    background-color: $blue20;
+    cursor: pointer;
+}
+
+.secondary-mobile-btn {
+    height: 40px;
+    padding: 12px 16px;
+    width: 68px;
+}
+
+.secondary-desktop-btn {
+    height: 51px;
+    padding: 16px;
+    width: 72px;
+}

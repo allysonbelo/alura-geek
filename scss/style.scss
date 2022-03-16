@@ -1,0 +1,75 @@
+@use 'sass:list';
+@use 'sass:math';
+
+$fonte-raleway: 'Raleway',
+sans-serif;
+
+$black100: #464646;
+$black05: #F5F5F5;
+$black50: #A2A2A2;
+$black30: #C8C8C8;
+$blue100: #2A7AE4;
+$blue80: #5595E9;
+$blue10: #EAF2FD;
+$blue20: #D4E4FA;
+$white100: #FFFFFF;
+
+@mixin for-phone-only {
+    @media (min-width: 360px) and (max-width:767.98px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-only {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin for-desktop-only {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin fontSize($size) {
+    font-size: calculaRem($size);
+}
+
+@function calculaRem($size) {
+    @return math.div($size, 16px) * 1rem;
+}
+
+@mixin flx($property, $jty-cnt) {
+    display: flex;
+    #{$property}: $jty-cnt;
+}
+
+html {
+    width: 100%;
+}
+
+.container {
+    display: grid;
+    font-family: $fonte-raleway;
+    grid-template-areas:
+        'header'
+        'banner'
+        'main'
+        'footer';
+    grid-template-rows: 72px 192px 1fr 655px;
+    margin: 0 auto;
+    width: 100%;
+
+    @include for-tablet-only() {
+        grid-template-rows: 72px 352px 1fr 466px;
+    }
+
+    @include for-desktop-only() {
+        grid-template-rows: 115px 352px 1fr 470px;
+    }
+
+
+}
+
+@import 'header.scss', 'banner.scss', 'main.scss', 'footer.scss', 'bases.scss';
