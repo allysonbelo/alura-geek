@@ -1,4 +1,78 @@
-.banner{
-    background-color: purple;
+.banner {
+    align-items: flex-end;
+    background: url(../img/banner_mobile.png) no-repeat center center / cover;
     grid-area: banner;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    padding: 16px;
+    display: flex;
+
+    @include for-tablet-only {
+        background: url(../img/banner_tablet.png) no-repeat center center / cover;
+    }
+
+    @include for-tablet-only {
+        background: url(../img/banner_desktop.png) no-repeat center center / cover;
+    }
+
+    @include for-tablet-only {
+        padding: 32px;
+    }
+
+    @include for-desktop-only {
+        padding-left: 152px;
+        padding-right: 152px;
+    }
+
+    .content {
+        @include flx(justify-content, space-between);
+        flex-direction: column;
+        row-gap: 8px;
+        bottom: 16px;
+        left: 0;
+        right: 0;
+        width: 100%;
+
+        @include for-tablet-only {
+            row-gap: 16px;
+        }
+
+        &__title {
+            color: $white100;
+            @include fontSize(22px);
+            font-weight: 700;
+
+            @include for-tablet-only {
+                @include fontSize(52px);
+            }
+        }
+
+        &__texto {
+            color: $white100;
+            @include fontSize(14px);
+            font-weight: 600;
+
+            @include for-tablet-only {
+                @include fontSize(22px);
+                font-weight: 700;
+            }
+        }
+
+        .primary-mobile-btn {
+            width: 119px;
+            height: 40px;
+            @include fontSize(14px);
+            font-weight: 600;
+            padding: 0;
+
+            @include for-desktop-only {
+                width: 130px;
+                height: 51px;
+                font-weight: 400;
+            }
+        }
+
+
+    }
 }
