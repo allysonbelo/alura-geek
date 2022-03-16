@@ -12,17 +12,12 @@
         background: url(../img/banner_tablet.png) no-repeat center center / cover;
     }
 
-    @include for-tablet-only {
+    @include for-desktop-only {
         background: url(../img/banner_desktop.png) no-repeat center center / cover;
     }
 
     @include for-tablet-only {
         padding: 32px;
-    }
-
-    @include for-desktop-only {
-        padding-left: 152px;
-        padding-right: 152px;
     }
 
     .content {
@@ -33,6 +28,8 @@
         left: 0;
         right: 0;
         width: 100%;
+        margin: 0 auto;
+        max-width: 1136px;
 
         @include for-tablet-only {
             row-gap: 16px;
@@ -48,7 +45,7 @@
             }
         }
 
-        &__texto {
+        &__text {
             color: $white100;
             @include fontSize(14px);
             font-weight: 600;
