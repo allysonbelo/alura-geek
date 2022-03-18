@@ -1,0 +1,30 @@
+.developer{
+    align-items: center;
+    background-color: $white100;
+    display: flex;
+    grid-area: developer;
+    justify-content: center;
+    width: 100%;
+    
+    &__text{
+        @include fontSize(16px);
+        font-weight: 500;
+        line-height: 18.78px;
+        color: $black100;
+
+        a{
+            text-decoration: none;
+            color: $blue80;
+
+            &:hover{
+                color: $blue100;
+                cursor: pointer;
+            }
+        }
+
+        span{
+            display: block;
+            text-align: center;
+        }
+    }
+}

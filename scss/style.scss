@@ -56,20 +56,22 @@ html {
         'header'
         'banner'
         'main'
-        'footer';
-    grid-template-rows: 72px 192px 1fr 655px;
+        'footer'
+        'developer';
+    grid-template-rows: 72px 192px 1fr 569px 102px;
     margin: 0 auto;
     width: 100%;
+    
 
     @include for-tablet-only() {
-        grid-template-rows: 72px 352px 1fr 466px;
+        grid-template-rows: 72px 352px 1fr 364px 102px;
     }
 
     @include for-desktop-only() {
-        grid-template-rows: 115px 352px 1fr 470px;
+        grid-template-rows: 115px 352px 1fr 368px 102px;
     }
 
 
 }
 
-@import 'header.scss', 'banner.scss', 'main.scss', 'footer.scss', 'bases.scss';
+@import 'header.scss', 'banner.scss', 'main.scss', 'footer.scss', 'bases.scss', 'developer.scss';
