@@ -5,6 +5,7 @@ $fonte-raleway: 'Raleway',
 sans-serif;
 
 $black100: #464646;
+$black80: #6B6B6B;
 $black05: #F5F5F5;
 $black50: #A2A2A2;
 $black30: #C8C8C8;
@@ -49,7 +50,7 @@ html {
     width: 100%;
 }
 
-.container, .container-login, .container-produtos {
+.container, .container-login, .container-produtos, .container-produto {
     background-color: $white100;
     display: grid;
     font-family: $fonte-raleway;
@@ -74,4 +75,4 @@ html {
 
 }
 
-@import 'header.scss', 'banner.scss', 'main.scss', 'footer.scss', 'bases.scss', 'developer.scss', 'login/login.scss', 'produtos/produtos.scss';
+@import 'header.scss', 'banner.scss', 'main.scss', 'footer.scss', 'bases.scss', 'developer.scss', 'login/login.scss', 'produtos/produtos.scss', 'produto/produto.scss';

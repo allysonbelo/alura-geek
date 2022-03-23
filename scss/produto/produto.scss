@@ -1,0 +1,179 @@
+.container-produto {
+
+    grid-template-areas:
+        'header'
+        'main'
+        'footer'
+        'developer';
+    grid-template-rows: 72px 1fr 569px 102px;
+    width: 100%;
+
+    @include for-tablet-only {
+        grid-template-rows: 72px 1fr 364px 102px;
+    }
+
+    @include for-desktop-only {
+        grid-template-rows: 115px 1fr 368px 102px;
+    }
+
+    .main__produto {
+        background-color: $black05;
+        margin: 0 auto;
+        padding: 16px;
+        width: min(100%, 1136px);
+
+        @include for-tablet-only{
+            width: 100%;
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+
+        @include for-desktop-only{
+            padding-top: 64px;
+            padding-bottom: 64px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .produto__form{
+            display: flex;
+            flex-direction: column;
+            row-gap: 16px;
+
+            .produto__title {
+                font-size: min(max(22px, 4vw), 32px);
+                margin-bottom: 16px;
+            }
+
+            @include for-desktop-only{
+                max-width: 559px;
+                margin: 0 auto;
+            }
+            
+            .produto__wrapper{
+                @include flx(justify-content, center);
+                align-items: center;
+                height: 134px;
+                width: 100%;
+
+                @include for-tablet-only{
+                    justify-content: flex-start;
+                    column-gap: 8px
+                }
+
+                .produto__label{
+                    @include fontSize(14px);
+                    align-items: center;
+                    background-color: $white100;
+                    border: 2px dashed #C8C8C8;
+                    color: $black80;
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    justify-content: center;
+                    line-height: 20px;
+                    row-gap: 16px;
+                    width: 100%;
+
+                    @include for-tablet-only{
+                        width: 254px;
+                        padding: 32px;
+                    }
+
+                    @include for-desktop-only{
+                        width: 282px; 
+                    }
+
+                    &::before{
+                        content: url(../../img/icon-add.png);
+
+                        @include for-tablet-only{
+                            content: url(../../img/icon-add-image.png);
+                        }
+                    }
+
+                    &::after{
+                        content: 'Adicione uma imagem para o seu produto';
+
+                        @include for-tablet-only{
+                            content: 'Arraste para adicionar uma imagem para o produto';
+                            text-align: center;
+                        }
+                    }
+                }
+
+                .produto__span{
+                    display: none;
+
+                    @include for-tablet-only{
+                        display: block;
+                    }
+                }
+
+                .secondary-mobile-btn{
+                    display: none;
+
+                    @include for-tablet-only{
+                        @include fontSize(16px);
+                        display: flex;
+                        height: 51px;
+                        line-height: 18.78px;
+                        width: 250px;
+
+                        &::after{
+                            content: 'Procure no seu tablet';
+
+                            @include for-desktop-only{
+                                content: 'Procure no seu computador';
+                            }
+                        }
+                    }
+                }
+
+                .input__upload{
+                    display: none;
+                }
+            }
+
+            .form__fildset {
+                background-color: $white100;
+                border: none;
+                display: flex;
+                flex-direction: column;
+                height: 56px;
+                justify-content: flex-end;
+                margin: 0;
+                position: relative;
+                padding: 0;
+
+                &:focus-within {
+                    .fildset__label {
+                        @include fontSize(12px);
+                        left: 12px;
+                        top: 8px;
+                    }
+                }
+
+                .fildset__label {
+                    @include fontSize(16px);
+                    color: $black50;
+                    cursor: text;
+                    left: 12px;
+                    line-height: 16px;
+                    position: absolute;
+                    transition: all .2s linear;
+                    top: 20px;
+                }
+            }
+
+            .form__textarea{
+                margin-top: 0;
+            }
+
+            .primary-mobile-btn{
+                height: 51px;
+                width: 100%;
+            }
+        }
+    }
+}

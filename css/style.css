@@ -2,7 +2,7 @@ html {
   width: 100%;
 }
 
-.container, .container-login, .container-produtos {
+.container, .container-login, .container-produtos, .container-produto {
   background-color: #FFFFFF;
   display: grid;
   font-family: "Raleway", sans-serif;
@@ -12,12 +12,12 @@ html {
   width: 100%;
 }
 @media (min-width: 768px) {
-  .container, .container-login, .container-produtos {
+  .container, .container-login, .container-produtos, .container-produto {
     grid-template-rows: 72px 352px 1fr 364px 102px;
   }
 }
 @media (min-width: 1200px) {
-  .container, .container-login, .container-produtos {
+  .container, .container-login, .container-produtos, .container-produto {
     grid-template-rows: 115px 352px 1fr 368px 102px;
   }
 }
@@ -431,47 +431,6 @@ html {
   line-height: 18.78px;
   margin-bottom: 8px;
 }
-.footer__content .footer__contact .contact__form .form__fildset {
-  background-color: #FFFFFF;
-  border: none;
-  display: flex;
-  flex-direction: column;
-  height: 56px;
-  justify-content: flex-end;
-  margin: 0;
-  position: relative;
-  padding: 0;
-}
-.footer__content .footer__contact .contact__form .form__fildset:focus-within .fildset__label {
-  font-size: 0.75rem;
-  left: 12px;
-  top: 8px;
-}
-.footer__content .footer__contact .contact__form .form__fildset .fildset__label {
-  font-size: 1rem;
-  color: #A2A2A2;
-  cursor: text;
-  left: 12px;
-  line-height: 16px;
-  position: absolute;
-  transition: all 0.2s linear;
-  top: 20px;
-}
-.footer__content .footer__contact .contact__form .form__textarea {
-  font-size: 1rem;
-  border: 0;
-  box-shadow: 0px 2px 0px -1px #C8C8C8;
-  height: 82px;
-  line-height: 20px;
-  margin-top: 16px;
-  outline: 0;
-  padding: 16px 12px;
-  resize: none;
-  width: 100%;
-}
-.footer__content .footer__contact .contact__form .form__textarea::placeholder {
-  color: #A2A2A2;
-}
 .footer__content .footer__contact .contact__form .primary-mobile-btn {
   font-size: 0.875rem;
   font-weight: 600;
@@ -547,13 +506,71 @@ html {
   width: 72px;
 }
 
-.fildset__input {
+.form__fildset {
+  background-color: #FFFFFF;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  height: 56px;
+  justify-content: flex-end;
+  margin: 0;
+  position: relative;
+  padding: 0;
+}
+.form__fildset:focus-within .fildset__label {
+  font-size: 0.75rem;
+  left: 12px;
+  top: 8px;
+}
+.form__fildset .fildset__label {
+  font-size: 1rem;
+  color: #A2A2A2;
+  cursor: text;
+  left: 12px;
+  line-height: 16px;
+  position: absolute;
+  transition: all 0.2s linear;
+  top: 20px;
+}
+.form__fildset .fildset__input {
   border: none;
   box-shadow: 0px 2px 0px -1px #C8C8C8;
-  outline: 0;
+  height: 100%;
   padding-left: 12px;
   padding-right: 12px;
+  outline: 0;
   width: 100%;
+}
+.form__fildset .form__textarea {
+  font-size: 1rem;
+  border: 0;
+  box-shadow: 0px 2px 0px -1px #C8C8C8;
+  height: 82px;
+  line-height: 20px;
+  margin-top: 16px;
+  outline: 0;
+  padding: 16px 12px;
+  resize: none;
+  width: 100%;
+}
+.form__fildset .form__textarea::placeholder {
+  color: #A2A2A2;
+}
+
+.form__textarea {
+  font-size: 1rem;
+  border: 0;
+  box-shadow: 0px 2px 0px -1px #C8C8C8;
+  height: 82px;
+  line-height: 20px;
+  margin-top: 16px;
+  outline: 0;
+  padding: 16px 12px;
+  resize: none;
+  width: 100%;
+}
+.form__textarea::placeholder {
+  color: #A2A2A2;
 }
 
 .developer {
@@ -695,6 +712,177 @@ html {
     height: 51px;
     width: 165px;
   }
+}
+
+.container-produto {
+  grid-template-areas: "header" "main" "footer" "developer";
+  grid-template-rows: 72px 1fr 569px 102px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .container-produto {
+    grid-template-rows: 72px 1fr 364px 102px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-produto {
+    grid-template-rows: 115px 1fr 368px 102px;
+  }
+}
+.container-produto .main__produto {
+  background-color: #F5F5F5;
+  margin: 0 auto;
+  padding: 16px;
+  width: min(100%, 1136px);
+}
+@media (min-width: 768px) {
+  .container-produto .main__produto {
+    width: 100%;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-produto .main__produto {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.container-produto .main__produto .produto__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+.container-produto .main__produto .produto__form .produto__title {
+  font-size: min(max(22px, 4vw), 32px);
+  margin-bottom: 16px;
+}
+@media (min-width: 1200px) {
+  .container-produto .main__produto .produto__form {
+    max-width: 559px;
+    margin: 0 auto;
+  }
+}
+.container-produto .main__produto .produto__form .produto__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 134px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .container-produto .main__produto .produto__form .produto__wrapper {
+    justify-content: flex-start;
+    column-gap: 8px;
+  }
+}
+.container-produto .main__produto .produto__form .produto__wrapper .produto__label {
+  font-size: 0.875rem;
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 2px dashed #C8C8C8;
+  color: #6B6B6B;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  line-height: 20px;
+  row-gap: 16px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .container-produto .main__produto .produto__form .produto__wrapper .produto__label {
+    width: 254px;
+    padding: 32px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-produto .main__produto .produto__form .produto__wrapper .produto__label {
+    width: 282px;
+  }
+}
+.container-produto .main__produto .produto__form .produto__wrapper .produto__label::before {
+  content: url(../../img/icon-add.png);
+}
+@media (min-width: 768px) {
+  .container-produto .main__produto .produto__form .produto__wrapper .produto__label::before {
+    content: url(../../img/icon-add-image.png);
+  }
+}
+.container-produto .main__produto .produto__form .produto__wrapper .produto__label::after {
+  content: "Adicione uma imagem para o seu produto";
+}
+@media (min-width: 768px) {
+  .container-produto .main__produto .produto__form .produto__wrapper .produto__label::after {
+    content: "Arraste para adicionar uma imagem para o produto";
+    text-align: center;
+  }
+}
+.container-produto .main__produto .produto__form .produto__wrapper .produto__span {
+  display: none;
+}
+@media (min-width: 768px) {
+  .container-produto .main__produto .produto__form .produto__wrapper .produto__span {
+    display: block;
+  }
+}
+.container-produto .main__produto .produto__form .produto__wrapper .secondary-mobile-btn {
+  display: none;
+}
+@media (min-width: 768px) {
+  .container-produto .main__produto .produto__form .produto__wrapper .secondary-mobile-btn {
+    font-size: 1rem;
+    display: flex;
+    height: 51px;
+    line-height: 18.78px;
+    width: 250px;
+  }
+  .container-produto .main__produto .produto__form .produto__wrapper .secondary-mobile-btn::after {
+    content: "Procure no seu tablet";
+  }
+}
+@media (min-width: 768px) and (min-width: 1200px) {
+  .container-produto .main__produto .produto__form .produto__wrapper .secondary-mobile-btn::after {
+    content: "Procure no seu computador";
+  }
+}
+.container-produto .main__produto .produto__form .produto__wrapper .input__upload {
+  display: none;
+}
+.container-produto .main__produto .produto__form .form__fildset {
+  background-color: #FFFFFF;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  height: 56px;
+  justify-content: flex-end;
+  margin: 0;
+  position: relative;
+  padding: 0;
+}
+.container-produto .main__produto .produto__form .form__fildset:focus-within .fildset__label {
+  font-size: 0.75rem;
+  left: 12px;
+  top: 8px;
+}
+.container-produto .main__produto .produto__form .form__fildset .fildset__label {
+  font-size: 1rem;
+  color: #A2A2A2;
+  cursor: text;
+  left: 12px;
+  line-height: 16px;
+  position: absolute;
+  transition: all 0.2s linear;
+  top: 20px;
+}
+.container-produto .main__produto .produto__form .form__textarea {
+  margin-top: 0;
+}
+.container-produto .main__produto .produto__form .primary-mobile-btn {
+  height: 51px;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

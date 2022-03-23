@@ -56,11 +56,77 @@
     width: 72px;
 }
 
-.fildset__input {
+.form__fildset {
+    background-color: $white100;
     border: none;
+    display: flex;
+    flex-direction: column;
+    height: 56px;
+    justify-content: flex-end;
+    margin: 0;
+    position: relative;
+    padding: 0;
+
+    &:focus-within {
+        .fildset__label {
+            @include fontSize(12px);
+            left: 12px;
+            top: 8px;
+        }
+    }
+
+    .fildset__label {
+        @include fontSize(16px);
+        color: $black50;
+        cursor: text;
+        left: 12px;
+        line-height: 16px;
+        position: absolute;
+        transition: all .2s linear;
+        top: 20px;
+    }
+
+    .fildset__input {
+        border: none;
+        box-shadow: 0px 2px 0px -1px #C8C8C8;
+        height: 100%;
+        padding-left: 12px;
+        padding-right: 12px;
+        outline: 0;
+        width: 100%;
+    }
+
+    .form__textarea{
+        @include fontSize(16px);
+        border: 0;
+        box-shadow: 0px 2px 0px -1px #C8C8C8;
+        height: 82px;
+        line-height: 20px;
+        margin-top: 16px;
+        outline: 0;
+        padding: 16px 12px;
+        resize: none;
+        width: 100%;
+
+        &::placeholder{
+            color: $black50;
+        }
+    }
+}
+
+.form__textarea{
+    @include fontSize(16px);
+    border: 0;
     box-shadow: 0px 2px 0px -1px #C8C8C8;
+    height: 82px;
+    line-height: 20px;
+    margin-top: 16px;
     outline: 0;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding: 16px 12px;
+    resize: none;
     width: 100%;
+
+    &::placeholder{
+        color: $black50;
+    }
 }
