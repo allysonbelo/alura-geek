@@ -1,4 +1,4 @@
-.container-login{
+.container-login {
     grid-template-areas:
         'header'
         'main'
@@ -7,7 +7,7 @@
     grid-template-rows: 72px 362px 569px 102px;
     margin: 0 auto;
     width: 100%;
-    
+
     @include for-tablet-only() {
         grid-template-rows: 72px 295px 364px 102px;
     }
@@ -16,13 +16,13 @@
         grid-template-rows: 115px 473px 368px 102px;
     }
 
-    .main__login{
+    .main__login {
         align-items: center;
         background-color: $black05;
         display: flex;
         justify-content: center;
 
-        .login__form{
+        .login__form {
             align-items: center;
             display: flex;
             flex-direction: column;
@@ -32,36 +32,42 @@
             width: 100%;
             max-width: 275px;
 
-            @include for-desktop-only{
+            @include for-desktop-only {
                 max-width: 423px;
                 row-gap: 24.63px;
             }
 
-            .login__title{
+            .login__title {
                 @include fontSize(16px);
                 line-height: 18.78px;
 
-                @include for-desktop-only{
+                @include for-desktop-only {
                     @include fontSize(18px);
-                    line-height: 21.13px; 
+                    line-height: 21.13px;
                 }
             }
 
-            .fildset__input{
-                height: 41px;
+            .fildset__input {
+                border: none;
+                box-shadow: 0px 2px 0px -1px #C8C8C8;
+                height: 51px;
+                padding-left: 12px;
+                padding-right: 12px;
+                outline: 0;
+                width: 100%;
 
-                @include for-desktop-only{
+                @include for-desktop-only {
                     height: 63.13px;
                 }
             }
         }
     }
 
-    .primary-mobile-btn{
+    .primary-mobile-btn {
         height: 40px;
         width: 109px;
 
-        @include for-desktop-only{
+        @include for-desktop-only {
             height: 62px;
             width: 100%;
         }

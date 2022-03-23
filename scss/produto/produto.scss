@@ -74,6 +74,7 @@
                     line-height: 20px;
                     row-gap: 16px;
                     width: 100%;
+                    cursor: pointer;
 
                     @include for-tablet-only{
                         width: 254px;
