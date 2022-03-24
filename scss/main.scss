@@ -111,6 +111,7 @@
                     color: $blue100;
                     font-weight: 700;
                     cursor: pointer;
+                    text-decoration: none;
 
                     @include for-tablet-only {
                         @include fontSize(16px);
