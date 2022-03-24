@@ -50,7 +50,11 @@ html {
     width: 100%;
 }
 
-.container, .container-login, .container-produtos, .container-produto {
+.container,
+.container-login,
+.container-produtos,
+.container-produto,
+.main__produto__detalhe {
     background-color: $white100;
     display: grid;
     font-family: $fonte-raleway;
@@ -75,4 +79,4 @@ html {
 
 }
 
-@import 'header.scss', 'banner.scss', 'main.scss', 'footer.scss', 'bases.scss', 'developer.scss', 'login/login.scss', 'produtos/produtos.scss', 'produto/produto.scss';
+@import 'header.scss', 'banner.scss', 'main.scss', 'footer.scss', 'bases.scss', 'developer.scss', 'login/login.scss', 'produtos/produtos.scss', 'produto/produto.scss', 'detalhes_do_produto/produto_detalhe.scss';
